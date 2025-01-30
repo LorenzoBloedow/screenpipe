@@ -6,6 +6,7 @@ on:
     #   - 'screenpipe-tauri-template/'
     # branches:
     #   - main
+    branches: [tauri-template-actions-development]
   pull_request:
     paths:
       - 'screenpipe-tauri-template/'
