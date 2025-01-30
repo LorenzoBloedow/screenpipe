@@ -1,16 +1,16 @@
-name: "Build Templates"
+name: Build Templates
 
 on:
   push:
-    paths:
-      - 'screenpipe-tauri-template/'
-    branches:
-      - main
+    # paths:
+    #   - 'screenpipe-tauri-template/'
+    # branches:
+    #   - main
   pull_request:
     paths:
       - 'screenpipe-tauri-template/'
-    branches:
-      - main
+    # branches:
+    #   - main
 jobs:
   build_tauri_template:
     runs-on: ubuntu-latest
