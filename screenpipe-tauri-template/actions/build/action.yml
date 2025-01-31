@@ -19,6 +19,7 @@ runs:
     # - run: npm ci
     - uses: oven-sh/setup-bun@v2
     - run: bun install --frozen-lockfile
+      shell: bash
     # Install system dependencies for Screenpipe and Tauri
     # - if: matrix.os == 'ubuntu-latest'
     - run: |
@@ -28,9 +29,10 @@ runs:
         libavcodec-dev libavutil-dev libswscale-dev libssl-dev libtesseract-dev libxdo-dev libsdl2-dev libclang-dev \
         libxtst-dev libasound2-dev libdbus-1-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev \
         libx11-dev libxi-dev libxext-dev libxrandr-dev libxinerama-dev libxcursor-dev clang llvm-dev llvm
-
+      shell: bash
     # Build and upload the Tauri app to the artifacts
     - run: bun tauri build && ls src-tauri/target/tauri/release/bundle/appimage
+      shell: bash
     # - uses: actions/upload-artifact@v4
     #   with:
     #     name: bundles-${{ matrix.os}}
