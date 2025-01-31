@@ -14,7 +14,8 @@ runs:
       with:
         toolchain: stable
     - uses: actions/checkout@v4
-      path: screenpipe-tauri-template
+      with:
+        path: screenpipe-tauri-template
     # Install Node.js, npm, and package.json dependencies
     # - uses: actions/setup-node@v4
     #   with:
