@@ -13,14 +13,9 @@ on:
     # branches:
     #   - main
 jobs:
-  checkout:
+  build_tauri_template:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-  build_tauri_template:
-    needs: checkout
-    # runs-on: ubuntu-latest
-    # steps:
-    # - uses: actions/checkout@v4
-    # - name: Calling workflow from screenpipe-tauri-template
-    uses: ./screenpipe-tauri-template/.github/workflows/build.yml
+    - uses: actions/checkout@v4
+    - name: Calling workflow from screenpipe-tauri-template
+      uses: ./screenpipe-tauri-template/actions/build
