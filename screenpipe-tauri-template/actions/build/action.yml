@@ -19,6 +19,7 @@ runs:
     #     node-version: '20.18.1'
     # - run: npm ci
     - uses: oven-sh/setup-bun@v2
+    - uses: actions/checkout@v4
     - run: bun install --frozen-lockfile
       shell: bash
     # Install system dependencies for Screenpipe and Tauri
@@ -44,4 +45,3 @@ runs:
 # checkout:
 #   runs-on: ${{ matrix.os }}
 #   steps:
-#     - uses: actions/checkout@v4
