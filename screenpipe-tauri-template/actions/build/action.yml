@@ -6,6 +6,7 @@ name: Build app
   # outputs:
   #   build: ${{ upload_build.outputs.artifact-id }}
 runs:
+  using: "composite"
   # runs-on: ${{ matrix.os }}
   steps:
     # Install Rust (rustc, cargo, etc)
